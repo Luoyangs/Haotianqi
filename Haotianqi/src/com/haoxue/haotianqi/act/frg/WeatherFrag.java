@@ -19,6 +19,8 @@ import android.widget.TextView;
 public class WeatherFrag extends Fragment {
 
 	private int fragmentId;
+	
+	private int i=0;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
