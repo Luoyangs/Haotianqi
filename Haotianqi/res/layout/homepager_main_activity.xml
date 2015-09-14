@@ -1,0 +1,33 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerlayout_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/frame_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <include
+            android:id="@+id/include_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/homepager_activity" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#EEffffff" >
+
+        <include
+            android:id="@+id/include_left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/homepage_left_menu_layout" />
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>
