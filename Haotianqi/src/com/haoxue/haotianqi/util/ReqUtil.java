@@ -18,6 +18,17 @@ public class ReqUtil {
 				+"&mcode="+ Constant.BAIDU_MCODE;
 	}
 	
+	/**
+	 * 说明：获取历史今天URL
+	 * @param month 月
+	 * @param day 天
+	 * @return
+	 */
+	public static String getHistoryRequestURL(String month,String day){
+		return Constant.HISTORY_URL + "?month=" + month + "&day=" + day
+				+ "&appkey=" + Constant.HISTORY_APPKEY;
+	}
+	
 	//http://api.map.baidu.com/telematics/v3/weather?location=北京&output=json&ak=iGs8rFvzh1e8c7C9DjXT5toK
 	//http://wthrcdn.etouch.cn/WeatherApi?city=成都
 }

@@ -29,6 +29,12 @@ public class Constant {
 	@SuppressLint("SdCardPath")
 	public static final String DB_PATH = "/data/data/com.haoxue.haotianqi/databases/";
 	
+	/**历史今天*/
+	public static final String HISTORY_URL = "http://api.46644.com/todayhistory/";
+	/**历史今天appkey*/
+	public static final String HISTORY_APPKEY = "1307ee261de8bbcf83830de89caae73f";
+	
+	
 	/**访问数据成功的返回码*/
 	public static final int LOAD_OK = 0x01;
 	/**访问数据失败的返回码*/
