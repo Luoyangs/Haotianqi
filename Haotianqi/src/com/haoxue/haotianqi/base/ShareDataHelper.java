@@ -17,6 +17,8 @@ public class ShareDataHelper {
 	private SharedPreferences wethershare;
 	/**缓存城市列表*/
 	private SharedPreferences cityshare;
+	/**缓存用户信息*/
+	private SharedPreferences usershare;
 	
 	private static ShareDataHelper instance = null;
 	
@@ -32,6 +34,20 @@ public class ShareDataHelper {
 		appshare = context.getSharedPreferences("appshare", Context.MODE_PRIVATE);
 		wethershare = context.getSharedPreferences("wethershare", Context.MODE_PRIVATE);
 		cityshare = context.getSharedPreferences("cityshare", Context.MODE_PRIVATE);
+		usershare = context.getSharedPreferences("usershare", Context.MODE_PRIVATE);
+	}
+	
+	/**保存用户登录信息*/
+	public void saveLoginAccount(String userName,String password){
+		Editor editor = usershare.edit();
+    	editor.putString("userName", userName);
+    	editor.putString("password", password);
+		editor.commit();
+	}
+	
+	/**获取用户登录信息*/
+	public String getLoginAccount(){
+		return usershare.getString("userName","");
 	}
 	
 	/**保存登录信息（是否第一次初始化程序）*/

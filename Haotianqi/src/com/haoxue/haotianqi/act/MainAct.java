@@ -58,11 +58,12 @@ public class MainAct extends FragmentActivity{
 	private DrawerLayout drawerlayout;
 	@ViewInject(R.id.left_drawer)
 	private View left_menu;
+	@ViewInject(R.id.changInfo)
+	private TextView changInfo;
 	@ViewInject(R.id.tip)
 	private RelativeLayout tip;//网络信息提示
 
 	private ResponseBean response = null;//天气数据
-	private ResponseBean response2 = null;
 	
 	private NetReceiver receiver;//网络监听器
 	private IntentFilter filter;
@@ -106,6 +107,13 @@ public class MainAct extends FragmentActivity{
 		String jsonString = ShareDataHelper.getInstance(this).getWether(local);
 		if (jsonString != null && jsonString.length() > 0) {
 			response = JSON.parseObject(jsonString, ResponseBean.class);
+		}
+		
+		String userName = ShareDataHelper.getInstance(this).getLoginAccount();
+		if ("".equals(userName)) {
+			changInfo.setText("用户登录");
+		}else{
+			changInfo.setText("修改信息");
 		}
 		
 		//设置默认界面
@@ -180,7 +188,11 @@ public class MainAct extends FragmentActivity{
 			startActivity(new Intent(MainAct.this, SeachAct.class));
 			break;
 		case R.id.changInfo://修改个人信息
-			startActivity(new Intent(MainAct.this, UserInfoAct.class));
+			if (changInfo.equals("修改信息")) {
+				startActivity(new Intent(MainAct.this, UserInfoAct.class));
+			}else{
+				startActivity(new Intent(MainAct.this, LoginAct.class));
+			}
 			break;
 		case R.id.set://设置
 			startActivity(new Intent(MainAct.this, SetAct.class));

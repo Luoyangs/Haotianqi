@@ -49,6 +49,7 @@
         <activity android:name="com.haoxue.haotianqi.act.NoteAct"/>
         <activity android:name="com.haoxue.haotianqi.act.AppStoreAct"/>
         <activity android:name="com.haoxue.haotianqi.act.AddCityAct"/>
+        <activity android:name="com.haoxue.haotianqi.act.LoginAct"/>
         
         <!-- 声明service组件,每个app拥有自己单独的定位service -->
         <service android:name="com.baidu.location.f"
