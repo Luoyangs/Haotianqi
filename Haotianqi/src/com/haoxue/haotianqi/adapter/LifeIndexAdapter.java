@@ -51,7 +51,7 @@ public class LifeIndexAdapter extends BaseAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		if (convertView == null ) {
-			convertView = inflater.inflate(R.layout.sportindex_gridview_item, parent, false);
+			convertView = inflater.inflate(R.layout.fragment_lifeindex_item, parent, false);
 		}
 		TextView dothing = (TextView) convertView.findViewById(R.id.dothing);
 		TextView index = (TextView) convertView.findViewById(R.id.index);

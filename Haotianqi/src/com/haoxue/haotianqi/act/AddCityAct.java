@@ -65,7 +65,7 @@ import android.widget.AbsListView.OnScrollListener;
  *	作者： Luoyangs
  *	时间： 2015年8月26日
  */
-@ContentView(R.layout.city_layout)
+@ContentView(R.layout.act_addcity_layout)
 public class AddCityAct extends Activity implements OnScrollListener {
 
 	@ViewInject(R.id.list_view)

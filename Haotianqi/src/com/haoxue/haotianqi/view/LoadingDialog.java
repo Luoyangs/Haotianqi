@@ -23,7 +23,7 @@ public class LoadingDialog  extends Dialog {
 
 	private LoadingDialog(Context context,String strMessage) {
 		super(context, R.style.CustomProgressDialog);
-		this.setContentView(R.layout.custom_loading_rotate);
+		this.setContentView(R.layout.cu_loading_rotate);
 		this.getWindow().getAttributes().gravity = Gravity.CENTER;
 		TextView tvMsg = (TextView) this.findViewById(R.id.text);
 		if (tvMsg != null) {

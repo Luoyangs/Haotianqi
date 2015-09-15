@@ -54,7 +54,7 @@ public class CityWeatherManagerAdapter extends BaseAdapter{
 	@Override
 	public View getView(final int position, View convertView, ViewGroup parent) {
 		if (convertView == null) {
-			convertView = inflater.inflate(R.layout.citymanager_gridview_item, parent,false);
+			convertView = inflater.inflate(R.layout.fragment_citymanager_layout_item, parent,false);
 		}
 		TextView grid_city = (TextView) convertView.findViewById(R.id.grid_city);
 		TextView grid_temp = (TextView) convertView.findViewById(R.id.grid_temp);

@@ -66,12 +66,12 @@ public class GuideAct extends Activity implements OnPageChangeListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.guide_layout);
+		setContentView(R.layout.act_guide_layout);
 		
 		mPager = (VerticalViewPager) findViewById(R.id.pager);
 
 		View view1 = LayoutInflater.from(this).inflate(
-				R.layout.layout_guide_1, null);
+				R.layout.fragment_guide_1, null);
 		t1_icon1= (ImageView) view1.findViewById(R.id.t1_icon1);
 		t1_icon2 = (ImageView) view1.findViewById(R.id.t1_icon2);
 		t1_fixed = (ImageView) view1.findViewById(R.id.t1_fixed);
@@ -79,14 +79,14 @@ public class GuideAct extends Activity implements OnPageChangeListener {
 		pagers.add(view1);
 
 		View view2 = LayoutInflater.from(this).inflate(
-				R.layout.layout_guide_2, null);
+				R.layout.fragment_guide_2, null);
 		t2_icon1 = (ImageView) view2.findViewById(R.id.t2_icon1);
 		t2_fixed = (ImageView) view2.findViewById(R.id.t2_fixed);
 		t2_next = (ImageView) view2.findViewById(R.id.t2_next);
 		pagers.add(view2);
 
 		View view3 = LayoutInflater.from(this).inflate(
-				R.layout.layout_guide_3, null);
+				R.layout.fragment_guide_3, null);
 		t3_icon2 = (ImageView) view3.findViewById(R.id.t3_icon2);
 		t3_icon3 = (ImageView) view3.findViewById(R.id.t3_icon3);
 		t3_icon4 = (ImageView) view3.findViewById(R.id.t3_icon4);
@@ -132,7 +132,7 @@ public class GuideAct extends Activity implements OnPageChangeListener {
 				});
 
 		View view4 = LayoutInflater.from(this).inflate(
-				R.layout.layout_guide_4, null);
+				R.layout.fragment_guide_4, null);
 		t4_icon1 = (ImageView) view4.findViewById(R.id.t4_icon1);
 		t4_fixed = (ImageView) view4.findViewById(R.id.t4_fixed);
 		t4_start = (Button) view4.findViewById(R.id.t4_start);

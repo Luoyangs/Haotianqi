@@ -5,7 +5,7 @@ import com.haoxue.haotianqi.R;
 import com.haoxue.haotianqi.act.frg.CityFrag;
 import com.haoxue.haotianqi.act.frg.HappyFrag;
 import com.haoxue.haotianqi.act.frg.HealthFrag;
-import com.haoxue.haotianqi.act.frg.LifeIndexFrag;
+import com.haoxue.haotianqi.act.frg.HistoryFrag;
 import com.haoxue.haotianqi.act.frg.MainFrag;
 import com.haoxue.haotianqi.act.frg.MovieFrag;
 import com.haoxue.haotianqi.act.frg.WhereFrag;
@@ -222,7 +222,7 @@ public class MainAct extends FragmentActivity{
 			buttom_menu_index.setTextColor(Color.parseColor(getString(R.string.color_bottombg)));
 			buttom_menu_city.setTextColor(Color.parseColor(getString(R.string.color_bottombgn)));
 			buttom_menu_weather.setTextColor(Color.parseColor(getString(R.string.color_bottombgn)));
-			this.moveTo(new LifeIndexFrag());
+			this.moveTo(new HistoryFrag());
 			break;
 		case R.id.bottom_citymanager://城市管理
 			buttom_menu_index.setTextSize(16);

@@ -43,7 +43,7 @@ public class MainFrag extends Fragment{
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		
-		View view = inflater.inflate(R.layout.mainfragment_layout, null);
+		View view = inflater.inflate(R.layout.fragment_main_layout, null);
 		viewPager = (ViewPager) view.findViewById(R.id.viewPager);
 		indicator = (LinePageIndicator) view.findViewById(R.id.indicator);
 

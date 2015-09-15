@@ -81,7 +81,7 @@ public class WeatherFrag extends Fragment {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.wetherfragment_layout, null);
+		View view = inflater.inflate(R.layout.fragment_wether_layout, null);
 		cityName = (TextView) view.findViewById(R.id.currentcity);
 		pm25 = (TextView) view.findViewById(R.id.pm25);
 		temp = (TextView) view.findViewById(R.id.temp);

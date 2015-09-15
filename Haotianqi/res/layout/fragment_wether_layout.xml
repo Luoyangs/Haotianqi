@@ -17,7 +17,6 @@
             android:layout_below="@id/homep_title"
             android:layout_centerHorizontal="true"
             android:gravity="center"
-            android:text="0.0"
             android:textColor="#fff"
             android:textSize="64sp" />
 

@@ -32,7 +32,7 @@ public class LaunchAct extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.launch_activity);
+		setContentView(R.layout.act_launch_layout);
 
 		new Handler().postDelayed(new Runnable() {
 			

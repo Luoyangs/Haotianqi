@@ -17,6 +17,6 @@ public class HealthFrag extends Fragment {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
-		return inflater.from(getActivity()).inflate(R.layout.layout_guide_1, null,false);
+		return inflater.from(getActivity()).inflate(R.layout.fragment_guide_1, null,false);
 	}
 }

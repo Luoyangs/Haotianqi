@@ -46,7 +46,7 @@ public class SpotsDialog extends AlertDialog {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.spotsdialog_layout);
+        setContentView(R.layout.cu_spotsdialog_layout);
         setCanceledOnTouchOutside(false);
 
         initProgress();

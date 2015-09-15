@@ -64,7 +64,7 @@ public class AddCityAdapter extends BaseAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		if (convertView == null) {
-			convertView = inflater.inflate(R.layout.addcity_gridview_item, parent, false);
+			convertView = inflater.inflate(R.layout.act_addcity_layout_gridview_item, parent, false);
 		}
 		TextView citytext = (TextView) convertView.findViewById(R.id.citytext);
 		citytext.setText(cityname[position]);
