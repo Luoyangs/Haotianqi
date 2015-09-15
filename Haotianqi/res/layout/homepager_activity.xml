@@ -9,7 +9,7 @@
         android:id="@+id/homep_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        layout="@layout/include_title_activity" />
+        layout="@layout/homepager_title_menu" />
 
     <FrameLayout
         android:id="@+id/fragmentlayout"
@@ -25,6 +25,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        layout="@layout/include_bottom_activity" />
+        layout="@layout/homepager_bottom_menu" />
 
 </RelativeLayout>

@@ -18,7 +18,7 @@ import android.widget.TextView;
  *	作者： Luoyangs
  *	时间： 2015年8月18日
  */
-public class SportIndexAdapter extends BaseAdapter {
+public class LifeIndexAdapter extends BaseAdapter {
 
 	private LayoutInflater inflater;
 	private List<SportIndexBean> list;
@@ -28,7 +28,7 @@ public class SportIndexAdapter extends BaseAdapter {
 			R.drawable.ic_todaycan_coldl, R.drawable.ic_todaycan_sport,
 			R.drawable.ic_todaycan_ultravioletrays };
 	
-	public SportIndexAdapter(Context context,List<SportIndexBean> list){
+	public LifeIndexAdapter(Context context,List<SportIndexBean> list){
 		this.inflater = LayoutInflater.from(context);
 		this.list = list;
 	}

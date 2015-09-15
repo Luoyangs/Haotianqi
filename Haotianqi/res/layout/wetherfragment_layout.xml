@@ -1,107 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical" >
+    android:layout_height="match_parent"
+    android:scrollbars="none" >
 
-    <TextView
-        android:id="@+id/temp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/homep_title"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:text="0.0"
-        android:textColor="#fff"
-        android:textSize="64sp" />
-
-    <LinearLayout
-        android:id="@+id/homep_nowinfo"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/temp"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal" >
+        android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/currentcity"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:focusable="true"
-            android:gravity="center"
-            android:textColor="#fff"
-            android:textSize="32sp" />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:orientation="vertical" >
-
-            <TextView
-                android:id="@+id/pm25"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center|top"
-                android:textColor="#fff"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/pollution_level"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textColor="#fff"
-                android:textSize="18sp" />
-        </LinearLayout>
-    </LinearLayout>
-    
-    <TextView
-        android:id="@+id/today_date_dec"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-		android:layout_below="@id/homep_nowinfo"
-		android:layout_marginTop="5dp"
-		android:textColor="#fff"
-		android:textSize="16sp" />
-
-    <LinearLayout
-        android:id="@+id/search_hint"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-		android:layout_below="@id/today_date_dec"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp" >
-
-        <EditText
-            android:id="@+id/inputcity"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:maxLength="10"
-            android:singleLine="true"
-            android:hint="@string/pleaseinput" />
-
-        <Button
-            android:id="@+id/sendcity"
+            android:id="@+id/temp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/homep_search_bg"
+            android:layout_below="@id/homep_title"
+            android:layout_centerHorizontal="true"
             android:gravity="center"
-            android:text="@string/search" />
-    </LinearLayout>
+            android:text="0.0"
+            android:textColor="#fff"
+            android:textSize="64sp" />
 
-    <ListView
-        android:id="@+id/tomorrow_weather"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_below="@id/search_hint"
-        android:cacheColorHint="@android:color/transparent" />
-    
+        <LinearLayout
+            android:id="@+id/homep_nowinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/temp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
 
-</RelativeLayout>
+            <TextView
+                android:id="@+id/currentcity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:focusable="true"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="32sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/pm25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|top"
+                    android:textColor="#fff"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/pollution_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/today_date_dec0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/homep_nowinfo"
+            android:layout_marginLeft="15sp"
+            android:layout_marginTop="5dp"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/today_date_dec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/today_date_dec0"
+            android:layout_marginLeft="15sp"
+            android:layout_marginTop="5dp"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tomorrow_weather_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/today_date_dec"
+            android:layout_marginLeft="15sp"
+            android:layout_marginTop="20sp"
+            android:text="天气预报"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.haoxue.haotianqi.view.CuListView
+            android:id="@+id/tomorrow_weather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tomorrow_weather_title"
+            android:layout_marginTop="10dp"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="#ccc"
+            android:dividerHeight="1px"
+            android:scrollbars="none" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/tomorrow_weather"
+            android:layout_marginBottom="10dp"
+            android:background="#ccc" />
+
+        <TextView
+            android:id="@+id/lifeIndex_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view1"
+            android:layout_marginLeft="15sp"
+            android:layout_marginTop="20sp"
+            android:text="生活指数"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.haoxue.haotianqi.view.CuGridView
+            android:id="@+id/lifeIndex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lifeIndex_title"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:horizontalSpacing="10dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="2"
+            android:scrollbars="none"
+            android:verticalSpacing="10dp" />
+    </RelativeLayout>
+
+</ScrollView>

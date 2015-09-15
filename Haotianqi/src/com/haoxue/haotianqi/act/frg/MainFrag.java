@@ -24,7 +24,7 @@ import android.view.ViewGroup;
  *	作者： Luoyangs
  *	时间： 2015年8月20日
  */
-@SuppressLint("ValidFragment")
+@SuppressLint({ "ValidFragment", "InflateParams" })
 public class MainFrag extends Fragment{
 
 	private ViewPager viewPager;
@@ -55,22 +55,9 @@ public class MainFrag extends Fragment{
 		adapter = new MainFragmentAdapter(getFragmentManager());
 		viewPager.setAdapter(adapter);
 		indicator.setViewPager(viewPager);
-		
-		//indicator.setCurrentItem(1);
 		indicator.setCurrentItem(currentId);
-		return view;
-	}
-	
-	@Override
-	public void onResume() {
-		super.onResume();
 		
-		//indicator.setCurrentItem(1);
-		//indicator.setCurrentItem(currentId);
-		/*viewPager.setCurrentItem(1);
-		indicator.setCurrentItem(1);
-		viewPager.setCurrentItem(currentId);
-		indicator.setCurrentItem(currentId);*/
+		return view;
 	}
 	
 	/**加载数据*/
@@ -80,7 +67,7 @@ public class MainFrag extends Fragment{
 		if (jsonString != null && jsonString.length() >0) {
 			citys = JSON.parseArray(jsonString, CityWetherBean.class);
 		}
-		if (citys == null || (citys.size() == 1 && citys.get(0).getCity().equals("添加"))) {
+		if (citys.size() == 1 && citys.get(0).getCity().equals("添加")) {
 			citys.add(new CityWetherBean("北京", ""));
 		}
 		for (int i = 0; i < citys.size(); i++) {

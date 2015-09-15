@@ -59,22 +59,15 @@ public class ShareDataHelper {
 	}
 	
 	/**缓存当前位置的天气信息(保存的为JSON格式)*/
-	public void saveWetherInfo(String wehter){
+	public void saveWetherInfo(String cityName,String wehter){
 		Editor editor = wethershare.edit();
-		editor.putString("weather", wehter);
+		editor.putString(cityName, wehter);
 		editor.commit();
 	}
 	
 	/**获取缓存的天气信息(为JSON格式)*/
-	public String getWether(){
-		return wethershare.getString("weather","");
-	}
-	
-	/**缓存当前位置的天气信息(保存的为JSON格式)*/
-	public void addCity(String city){
-		Editor editor = wethershare.edit();
-		editor.putString("cityName", city);
-		editor.commit();
+	public String getWether(String cityName){
+		return wethershare.getString(cityName,"");
 	}
 	
 	/**缓存城市列表信息(保存的为JSON格式)*/

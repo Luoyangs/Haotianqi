@@ -16,7 +16,7 @@ public class Constant {
 	/**百度天气API的ak*/
 	public static final String BAIDU_AK = "zwioFusFO9VIxEY9MhE5o9XX";
 	/**百度天气API的mcode*/
-	public static final String BAIDU_MCODE = "4C:10:B0:6C:5B:17:1D:C7:8C:E9:58:F8:1E:4A:63:0B:E1:DA:A2:63;com.haoxue.haotianqi";
+	public static final String BAIDU_MCODE = "D2:F7:D4:59:C2:1D:64:F1:78:24:BF:48:6E:15:97:F0:EC:79:2C:13;com.haoxue.haotianqi";
 	/**城市天气管理数据库名字*/
 	public static final String CITY_WEATHER_MANAGER_DB_NAME = "citymanager_db";
 	/**城市天气管理表的名字*/

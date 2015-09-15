@@ -103,7 +103,7 @@ public class MainAct extends FragmentActivity{
 		//获取位置
 		local = ShareDataHelper.getInstance(this).getLastCity();
 		//获取天气
-		String jsonString = ShareDataHelper.getInstance(this).getWether();
+		String jsonString = ShareDataHelper.getInstance(this).getWether(local);
 		if (jsonString != null && jsonString.length() > 0) {
 			response = JSON.parseObject(jsonString, ResponseBean.class);
 		}
@@ -149,7 +149,7 @@ public class MainAct extends FragmentActivity{
 				response = JSON.parseObject(jsonString, ResponseBean.class);
 				if (response != null && response.getError() == 0) {
 					// 保存到本地
-					ShareDataHelper.getInstance(MainAct.this).saveWetherInfo(jsonString);
+					ShareDataHelper.getInstance(MainAct.this).saveWetherInfo(local,jsonString);
 					handler.sendEmptyMessage(Constant.LOAD_OK);
 				}
 			}
@@ -195,6 +195,9 @@ public class MainAct extends FragmentActivity{
 			startActivity(new Intent(MainAct.this, AppStoreAct.class));
 			break;
 		}
+		if (drawerlayout.isDrawerOpen(left_menu)) {
+			drawerlayout.closeDrawer(left_menu);
+		} 
 	}
 	
 	@OnClick({R.id.bottom_todaycan,R.id.bottom_citymanager,R.id.bottom_weathertext})

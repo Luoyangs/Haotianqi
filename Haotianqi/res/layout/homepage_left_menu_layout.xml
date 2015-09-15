@@ -136,7 +136,7 @@
                     android:textColor="#fff" />
 
                 <ImageView
-                    android:id="@+id/msg_unread"
+                    android:id="@+id/msg_unread0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/unread_count_bg" />
@@ -167,7 +167,7 @@
                     android:textColor="#fff" />
 
                 <ImageView
-                    android:id="@+id/msg_unread"
+                    android:id="@+id/msg_unread1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/unread_count_bg" />
@@ -191,18 +191,16 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="left|center_vertical"
+                    android:gravity="center"
                     android:orientation="vertical" >
 
                     <ImageView
-                        android:id="@+id/imgDynamic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="center"
                         android:src="@drawable/home" />
 
                     <TextView
-                        android:id="@+id/txtDynamic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6sp"
@@ -215,19 +213,17 @@
                     android:id="@+id/gv_jiankang"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:gravity="center"
                     android:orientation="vertical" >
 
                     <ImageView
-                        android:id="@+id/imgDynamic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="center"
                         android:src="@drawable/home" />
 
                     <TextView
-                        android:id="@+id/txtDynamic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6sp"
@@ -241,18 +237,16 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="right|center_vertical"
+                    android:gravity="center"
                     android:orientation="vertical" >
 
                     <ImageView
-                        android:id="@+id/imgDynamic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="center"
                         android:src="@drawable/home" />
 
                     <TextView
-                        android:id="@+id/txtDynamic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6sp"
@@ -274,18 +268,16 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="left|center_vertical"
+                    android:gravity="center"
                     android:orientation="vertical" >
 
                     <ImageView
-                        android:id="@+id/imgDynamic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="center"
                         android:src="@drawable/home" />
 
                     <TextView
-                        android:id="@+id/txtDynamic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6sp"
@@ -298,19 +290,17 @@
                     android:id="@+id/gv_xingzuo"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:gravity="center"
                     android:orientation="vertical" >
 
                     <ImageView
-                        android:id="@+id/imgDynamic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="center"
                         android:src="@drawable/home" />
 
                     <TextView
-                        android:id="@+id/txtDynamic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6sp"
@@ -324,18 +314,16 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="right|center_vertical"
+                    android:gravity="center"
                     android:orientation="vertical" >
 
                     <ImageView
-                        android:id="@+id/imgDynamic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="center"
                         android:src="@drawable/home" />
 
                     <TextView
-                        android:id="@+id/txtDynamic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6sp"
