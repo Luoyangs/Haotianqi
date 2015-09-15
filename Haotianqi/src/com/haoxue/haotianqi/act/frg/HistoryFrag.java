@@ -7,6 +7,7 @@ import com.haoxue.haotianqi.R;
 import com.haoxue.haotianqi.view.RefreshLayout;
 import com.haoxue.haotianqi.view.RefreshLayout.OnLoadListener;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -22,6 +23,7 @@ import android.widget.ListView;
  *	作者： Luoyangs
  *	时间： 2015年8月24日
  */
+@SuppressLint("InflateParams")
 public class HistoryFrag extends Fragment implements OnRefreshListener,OnLoadListener {
 
 	private RefreshLayout swipeLayout;
@@ -39,6 +41,8 @@ public class HistoryFrag extends Fragment implements OnRefreshListener,OnLoadLis
 		list = new ArrayList<HashMap<String,String>>();
 		
 		this.initData();
+		swipeLayout.setColorScheme(R.color.color_bule2, R.color.color_bule1,
+				R.color.color_bule2, R.color.color_bule3);
 		swipeLayout.setOnRefreshListener(this);
 		swipeLayout.setOnLoadListener(this);
 		//设置自动刷新 swipeLayout.setRefreshing(true);
@@ -66,11 +70,9 @@ public class HistoryFrag extends Fragment implements OnRefreshListener,OnLoadLis
 	
 	private class MyAdapter extends BaseAdapter {
 		public ArrayList<HashMap<String, String>> list;
-		public Context context;
 		public LayoutInflater layoutInflater;
 
 		public MyAdapter(Context context, ArrayList<HashMap<String, String>> list) {
-			this.context = context;
 			this.list = list;
 			layoutInflater = LayoutInflater.from(context);
 		}
@@ -94,7 +96,7 @@ public class HistoryFrag extends Fragment implements OnRefreshListener,OnLoadLis
 		public View getView(int position, View convertView, ViewGroup parent) {
 			View view = null;
 			if (convertView == null) {
-				view = layoutInflater.inflate(R.layout.item, null);
+				view = layoutInflater.inflate(R.layout.fragment_history_item, null);
 			} else {
 				view = convertView;
 			}

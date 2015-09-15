@@ -45,7 +45,7 @@ public class RefreshLayout extends SwipeRefreshLayout implements
 	 * ListView的加载中footer
 	 */
 	private View mListViewFooter;
-
+	
 	/**
 	 * 按下时的y坐标
 	 */
@@ -75,7 +75,7 @@ public class RefreshLayout extends SwipeRefreshLayout implements
 		mListViewFooter = LayoutInflater.from(context).inflate(
 				R.layout.swiperelayout_footer, null, false);
 	}
-
+	
 	@Override
 	protected void onLayout(boolean changed, int left, int top, int right,
 			int bottom) {
@@ -102,11 +102,6 @@ public class RefreshLayout extends SwipeRefreshLayout implements
 		}
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.view.ViewGroup#dispatchTouchEvent(android.view.MotionEvent)
-	 */
 	@Override
 	public boolean dispatchTouchEvent(MotionEvent event) {
 		final int action = event.getAction();

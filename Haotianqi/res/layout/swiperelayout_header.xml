@@ -2,10 +2,14 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
 
-    <RelativeLayout
+    <TextView
         android:layout_width="fill_parent"
         android:layout_height="200dp"
-        android:background="#299999" >
-    </RelativeLayout>
+        android:background="#299999"
+        android:gravity="center"
+        android:text="铭记历史，不忘昨天"
+        android:textColor="#fff"
+        android:textSize="26sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
