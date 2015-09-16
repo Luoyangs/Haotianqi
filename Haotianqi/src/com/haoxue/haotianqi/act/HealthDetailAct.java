@@ -10,8 +10,12 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebSettings.LayoutAlgorithm;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.TextView;
 
 /**
  * 说明：
@@ -25,6 +29,8 @@ public class HealthDetailAct extends Activity {
 	private WebView webView;
 	@ViewInject(R.id.titilbar_right)
 	private Button titilbar_right;
+	@ViewInject(R.id.titilbar_title)
+	private TextView titilbar_title;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +39,7 @@ public class HealthDetailAct extends Activity {
 		ViewUtils.inject(this);
 		
 		titilbar_right.setVisibility(View.GONE);
+		titilbar_title.setText("健康资讯");
 		Intent intent = getIntent();
 		String url = intent.getStringExtra("url");
 		webView.loadUrl(url);
