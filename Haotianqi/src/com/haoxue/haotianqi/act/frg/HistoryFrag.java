@@ -74,6 +74,7 @@ public class HistoryFrag extends Fragment implements OnRefreshListener,OnLoadLis
 	};
 
 	
+	@SuppressWarnings("static-access")
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_history_layout, null, false);
@@ -251,6 +252,7 @@ public class HistoryFrag extends Fragment implements OnRefreshListener,OnLoadLis
 	public void onRefresh() {
 		swipeLayout.postDelayed(new Runnable() {
 
+			@SuppressWarnings("static-access")
 			@Override
 			public void run() {
 				// 更新数据
