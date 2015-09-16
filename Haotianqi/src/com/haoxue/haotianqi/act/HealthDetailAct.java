@@ -6,10 +6,12 @@ import com.lidroid.xutils.view.annotation.ContentView;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.lidroid.xutils.view.annotation.event.OnClick;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
@@ -19,6 +21,7 @@ import android.widget.TextView;
  * 作者：Luoyangs
  * 时间：2015-9-16
  */
+@SuppressLint("SetJavaScriptEnabled")
 @ContentView(R.layout.act_health_detail_layout)
 public class HealthDetailAct extends Activity {
 
@@ -40,6 +43,9 @@ public class HealthDetailAct extends Activity {
 		Intent intent = getIntent();
 		String url = intent.getStringExtra("url");
 		webView.loadUrl(url);
+		//启用支持javascript
+		WebSettings settings = webView.getSettings();
+		settings.setJavaScriptEnabled(true);
 	}
 	
 	@OnClick(R.id.titilbar_left)
