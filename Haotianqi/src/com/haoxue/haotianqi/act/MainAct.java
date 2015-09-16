@@ -32,10 +32,12 @@ import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.DrawerLayout;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -62,7 +64,11 @@ public class MainAct extends FragmentActivity{
 	private TextView changInfo;
 	@ViewInject(R.id.tip)
 	private RelativeLayout tip;//网络信息提示
-
+	@ViewInject(R.id.home_bottom_menu_bar)
+	private LinearLayout layout;
+	@ViewInject(R.id.maintitle)
+	private TextView maintitle;//toolbar上面的名字
+	
 	private ResponseBean response = null;//天气数据
 	
 	private NetReceiver receiver;//网络监听器
@@ -178,7 +184,7 @@ public class MainAct extends FragmentActivity{
 	@OnClick(R.id.tip)
 	public void setNetwork(View view){
 		//设置网络
-		
+		startActivity(new Intent(Settings.ACTION_SETTINGS));
 	}
 	
 	@OnClick({R.id.homep_seach,R.id.changInfo,R.id.set,R.id.pifu,R.id.tongzhi,R.id.app})
@@ -250,21 +256,33 @@ public class MainAct extends FragmentActivity{
 		switch (view.getId()) {
 		case R.id.gv_tianqi://天气（首页）
 			this.moveTo(new MainFrag(0));
+			layout.setVisibility(View.VISIBLE);
+			maintitle.setText(R.string.app_name);
 			break;
 		case R.id.gv_jiankang ://健康
 			this.moveTo(new HealthFrag());
+			layout.setVisibility(View.GONE);
+			maintitle.setText("健康资讯");
 			break;
 		case R.id.gv_jingdian://景点
 			this.moveTo(new WhereFrag());
+			layout.setVisibility(View.GONE);
+			maintitle.setText("景点查询");
 			break;
 		case R.id.gv_yingshi://影视
 			this.moveTo(new MovieFrag());
+			layout.setVisibility(View.GONE);
+			maintitle.setText("影视查询");
 			break;
 		case R.id.gv_xingzuo://星座
 			this.moveTo(new XingzuoFrag());
+			layout.setVisibility(View.GONE);
+			maintitle.setText("星座运势");
 			break;
 		case R.id.gv_kuaile://每日一笑
 			this.moveTo(new HappyFrag());
+			layout.setVisibility(View.GONE);
+			maintitle.setText("每日一乐");
 			break;
 		}
 	}

@@ -34,7 +34,15 @@ public class Constant {
 	/**历史今天appkey*/
 	public static final String HISTORY_APPKEY = "1307ee261de8bbcf83830de89caae73f";
 	
+	/**健康资讯微信*/
+	public static final String HEALTH_URL = "http://api.huceo.com/health/other/";
+	/**健康资讯微信appkey*/
+	public static final String HEALTH_APPKEY = "bb28b914fc5ba4ba97cd37408c9b75d8";
 	
+	/**保存图片文件路径*/
+	@SuppressLint("SdCardPath")
+	public static final String IMAGE_PATH="/mnt/sdcard/downimg";
+    
 	/**访问数据成功的返回码*/
 	public static final int LOAD_OK = 0x01;
 	/**访问数据失败的返回码*/

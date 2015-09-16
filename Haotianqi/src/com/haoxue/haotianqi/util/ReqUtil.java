@@ -29,6 +29,16 @@ public class ReqUtil {
 				+ "&appkey=" + Constant.HISTORY_APPKEY;
 	}
 	
+	/**
+	 * 说明：获取健康资讯URL（每次10条）
+	 * @param page 页码
+	 * @return
+	 */
+	public static String getHealthRequestURL(int page){
+		return Constant.HEALTH_URL + "?page=" + page + "&num=10" + "&key="
+				+ Constant.HEALTH_APPKEY;
+	}
+	
 	//http://api.map.baidu.com/telematics/v3/weather?location=北京&output=json&ak=iGs8rFvzh1e8c7C9DjXT5toK
 	//http://wthrcdn.etouch.cn/WeatherApi?city=成都
 }

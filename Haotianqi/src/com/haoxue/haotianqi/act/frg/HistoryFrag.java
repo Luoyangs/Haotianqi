@@ -2,8 +2,6 @@ package com.haoxue.haotianqi.act.frg;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -30,8 +28,6 @@ import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
 import android.text.Html;
-import android.text.Html.ImageGetter;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,9 +51,6 @@ public class HistoryFrag extends Fragment implements OnRefreshListener,OnLoadLis
 	private LoadingDialog dialog;//加载框
 	private static int month;
 	private static int day;
-	
-	//保存文件路径
-    private final String path="/mnt/sdcard/downimg";
 	
 	@SuppressLint("HandlerLeak")
 	private final Handler handler = new Handler() {
@@ -212,7 +205,7 @@ public class HistoryFrag extends Fragment implements OnRefreshListener,OnLoadLis
 	final Html.ImageGetter imageGetter = new Html.ImageGetter() {
         public Drawable getDrawable(final String source) {
             Drawable drawable = null;
-            String fileString=path+String.valueOf(source.hashCode());
+            String fileString = Constant.IMAGE_PATH + String.valueOf(source.hashCode());
             //判断SD卡里面是否存在图片文件
             if (new File(fileString).exists()) {
                 //获取本地文件返回Drawable
@@ -228,7 +221,7 @@ public class HistoryFrag extends Fragment implements OnRefreshListener,OnLoadLis
 					@Override
 					public void run() {
 						try {
-        					DownloadUtils.download(source, path+String.valueOf(source.hashCode()));
+        					DownloadUtils.download(source, Constant.IMAGE_PATH + String.valueOf(source.hashCode()));
         				} catch (IOException e) {
         					e.printStackTrace();
         				}
