@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10sp">
+
+    <TextView
+        android:id="@+id/hap_titile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/coff"
+        android:drawablePadding="6sp"
+        android:paddingLeft="4dp"
+        android:text="精神科的经济可能是假的"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/hap_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:paddingLeft="8dp"
+        android:src="@drawable/ic_launcher"
+        android:paddingRight="8dp" />
+
+    <TextView
+        android:id="@+id/hap_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:gravity="right"
+        android:paddingRight="8dp"
+        android:text="2015-12-11"
+        android:textColor="#bbb"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

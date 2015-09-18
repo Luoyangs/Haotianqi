@@ -39,6 +39,13 @@ public class Constant {
 	/**健康资讯微信appkey*/
 	public static final String HEALTH_APPKEY = "bb28b914fc5ba4ba97cd37408c9b75d8";
 	
+	/**每日一笑(Text)*/
+	public static final String HAPPY_TEXT_URL = "http://apis.baidu.com/showapi_open_bus/showapi_joke/joke_text";
+	/**每日一笑(Pic)*/
+	public static final String HAPPY_PIC_URL = "http://apis.baidu.com/showapi_open_bus/showapi_joke/joke_pic";
+	/**每日一笑appkey*/
+	public static final String HAPPY_APPKEY = "86c994266ab96e8b233d3fde78e775d8";
+	
 	/**保存图片文件路径*/
 	@SuppressLint("SdCardPath")
 	public static final String IMAGE_PATH="/mnt/sdcard/downimg";

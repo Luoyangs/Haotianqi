@@ -39,6 +39,24 @@ public class ReqUtil {
 				+ Constant.HEALTH_APPKEY;
 	}
 	
+	/**
+	 * 说明：获取笑话（Text）URL（每次10条）
+	 * @param page 页码
+	 * @return
+	 */
+	public static String getHappyTextRequestURL(int page){
+		return Constant.HAPPY_TEXT_URL + "?page=" + page;
+	}
+	
+	/**
+	 * 说明：获取笑话（Pic）URL（每次10条）
+	 * @param page 页码
+	 * @return
+	 */
+	public static String getHappyPicRequestURL(int page){
+		return Constant.HAPPY_PIC_URL + "?page=" + page;
+	}
+	
 	//http://api.map.baidu.com/telematics/v3/weather?location=北京&output=json&ak=iGs8rFvzh1e8c7C9DjXT5toK
 	//http://wthrcdn.etouch.cn/WeatherApi?city=成都
 }

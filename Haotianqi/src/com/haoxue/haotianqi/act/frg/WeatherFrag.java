@@ -236,7 +236,7 @@ public class WeatherFrag extends Fragment {
 					if (!NetWorkUtil.isNetworkAvailable(getActivity())) {
 						handler.sendEmptyMessage(Constant.LOAD_NO_NET);
 					} else {
-						String jsonString = NetWorkUtil.doGet(ReqUtil.getRequestURL(local),null);
+						String jsonString = NetWorkUtil.doGet(ReqUtil.getRequestURL(local),null,null,null);
 						response = JSON.parseObject(jsonString, ResponseBean.class);
 						if (response != null && response.getError() == 0) {
 							// 保存到本地

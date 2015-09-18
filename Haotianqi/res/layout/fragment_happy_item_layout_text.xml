@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10sp">
+
+    <TextView
+        android:id="@+id/hap_titile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/coff"
+        android:drawablePadding="6sp"
+        android:paddingLeft="4dp"
+        android:text="精神科的经济可能是假的"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/hap_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="\t精神科的经济可尊姓大名，女，在室内的建筑师多种，写的能是假的"
+        android:textColor="#222"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/hap_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:gravity="right"
+        android:paddingRight="8dp"
+        android:text="2015-12-11"
+        android:textColor="#bbb"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

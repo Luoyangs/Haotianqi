@@ -159,7 +159,7 @@ public class MainAct extends FragmentActivity{
 			if (!NetWorkUtil.isNetworkAvailable(MainAct.this)) {
 				handler.sendEmptyMessage(Constant.LOAD_NO_NET);
 			} else {
-				jsonString = NetWorkUtil.doGet(ReqUtil.getRequestURL(local),null);
+				jsonString = NetWorkUtil.doGet(ReqUtil.getRequestURL(local),null,null,null);
 				response = JSON.parseObject(jsonString, ResponseBean.class);
 				if (response != null && response.getError() == 0) {
 					// 保存到本地

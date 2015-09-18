@@ -128,8 +128,7 @@ public class HealthFrag extends Fragment implements OnRefreshListener, OnLoadLis
 					if (!NetWorkUtil.isNetworkAvailable(getActivity())) {
 						handler.sendEmptyMessage(Constant.LOAD_NO_NET);
 					} else {
-						String jsonString = NetWorkUtil.doGet(
-								ReqUtil.getHealthRequestURL(page), null);
+						String jsonString = NetWorkUtil.doGet(ReqUtil.getHealthRequestURL(page), null,null,null);
 						response = JSON.parseObject(jsonString,
 								HeaResponse.class);
 						if (response != null

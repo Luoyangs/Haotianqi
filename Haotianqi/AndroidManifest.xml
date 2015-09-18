@@ -51,6 +51,7 @@
         <activity android:name="com.haoxue.haotianqi.act.AddCityAct"/>
         <activity android:name="com.haoxue.haotianqi.act.LoginAct"/>
         <activity android:name="com.haoxue.haotianqi.act.HealthDetailAct"/>
+        <activity android:name="com.haoxue.haotianqi.act.ShowImageAct"/>
         
         <!-- 声明service组件,每个app拥有自己单独的定位service -->
         <service android:name="com.baidu.location.f"

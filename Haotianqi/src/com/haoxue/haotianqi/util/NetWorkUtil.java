@@ -83,7 +83,7 @@ public class NetWorkUtil {
 	 * @param params
 	 * @return
 	 */
-	public static String doGet(String baseUrl, Map<String, String> params)
+	public static String doGet(String baseUrl, Map<String, String> params,String headerName,String headerValue)
 			throws Exception {
 		String url = baseUrl;
 		if (params != null && params.size() > 0) {
@@ -103,6 +103,9 @@ public class NetWorkUtil {
 		// 生成请求对象
 		HttpGet httpGet = new HttpGet(url);
 		HttpClient httpClient = new DefaultHttpClient();
+		if (headerName != null) {
+			httpGet.setHeader(headerName,  headerValue);
+		}
 		// 设置连接超时为5s
 		httpClient.getParams().setParameter(
 				CoreConnectionPNames.CONNECTION_TIMEOUT, 50000);
