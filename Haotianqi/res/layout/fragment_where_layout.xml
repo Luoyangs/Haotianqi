@@ -4,22 +4,42 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <AutoCompleteTextView
-        android:id="@+id/find"
+    <LinearLayout
+        android:id="@+id/title_bar0"
         android:layout_width="match_parent"
-        android:layout_height="40sp"
-        android:drawableLeft="@drawable/search"
-        android:drawablePadding="6sp"
-        android:padding="5sp"
-        android:background="@drawable/edittext_bg"
-        android:textSize="14sp"
-        android:visibility="gone" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <AutoCompleteTextView
+            android:id="@+id/find"
+            android:layout_width="0sp"
+            android:layout_height="40sp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_bg"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="6sp"
+            android:padding="5sp"
+            android:textSize="14sp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40sp"
+            android:paddingLeft="15sp"
+            android:paddingRight="15sp"
+            android:gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:text="搜索" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal" >
 
         <TextView
             android:layout_width="0sp"
@@ -27,8 +47,8 @@
             android:layout_weight="1"
             android:background="@android:color/transparent"
             android:gravity="center_vertical"
-            android:text="热门游记"
             android:paddingLeft="6sp"
+            android:text="热门游记"
             android:textColor="#fff"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -37,9 +57,9 @@
             android:id="@+id/iv_seach"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
             android:paddingLeft="15sp"
             android:paddingRight="15sp"
-            android:layout_gravity="center_vertical"
             android:src="@drawable/search2" />
     </LinearLayout>
 
@@ -49,12 +69,20 @@
         android:layout_height="1px"
         android:background="#fff" />
 
-    <ListView
-        android:id="@+id/listview"
+    <com.haoxue.haotianqi.view.RefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipe_container"
         android:layout_width="match_parent"
-        android:layout_height="0sp"
-        android:layout_weight="1"
-        android:divider="#bbb"
-        android:dividerHeight="1px" />
+        android:layout_height="wrap_content" >
+
+        <com.haoxue.haotianqi.view.CuListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="1"
+            android:divider="#eee"
+            android:dividerHeight="14sp"
+            android:scrollbars="none" />
+    </com.haoxue.haotianqi.view.RefreshLayout>
 
 </LinearLayout>

@@ -37,14 +37,17 @@ public class ShowImageAct extends Activity {
 
 			@Override
 			public void onClick(View view) {
-				finish();
-				imageView.transformOut();
+				exit();
 			}
 		});
 	}
 	
 	@Override
 	public void onBackPressed() {
+		exit();
+	}
+	
+	private void exit(){
 		imageView.setOnTransformListener(new SmoothImageView.TransformListener() {
 			@Override
 			public void onTransformComplete(int mode) {

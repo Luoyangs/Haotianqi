@@ -6,12 +6,15 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:paddingTop="14sp"
+        android:background="#fff" >
 
         <ImageView
             android:id="@+id/headImg"
             android:layout_width="50sp"
             android:layout_height="50sp"
+            android:layout_marginLeft="8sp"
             android:src="@drawable/ic_launcher" />
 
         <TextView
@@ -21,7 +24,7 @@
             android:layout_toRightOf="@+id/headImg"
             android:paddingLeft="8sp"
             android:text="我说的吧换"
-            android:textColor="#fff"
+            android:textColor="#000"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -46,7 +49,7 @@
             android:paddingLeft="8sp"
             android:paddingTop="6sp"
             android:text="来自:去哪儿"
-            android:textColor="#bbb"
+            android:textColor="#444"
             android:textSize="12sp" />
     </RelativeLayout>
 
@@ -54,12 +57,14 @@
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="36sp"
+        android:background="#F7FCF7"
         android:drawableLeft="@drawable/biaoqian"
-        android:drawablePadding="6sp"
+        android:drawablePadding="3sp"
         android:ellipsize="end"
+        android:paddingLeft="8sp"
         android:gravity="center_vertical"
         android:text="山东省科技的看来是大家圣诞节吗"
-        android:textColor="#fff"
+        android:textColor="#222"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -67,68 +72,120 @@
         android:id="@+id/tv_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#F7FCF7"
         android:paddingLeft="10sp"
         android:paddingRight="10sp"
         android:text="\t山东省东省科技的看来是大家圣诞节吗东省科技的看来是大家圣诞节吗科技的看来是大家圣诞节吗"
-        android:textColor="#ccc"
+        android:textColor="#111"
         android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="match_parent"
+        android:layout_height="250sp"
+        android:background="#F7FCF7"
+        android:padding="10sp"
+        android:src="@drawable/ic_launcher" />
+
+    <View
+        android:layout_width ="match_parent"
+        android:layout_height="1px"
+        android:background="#aaa" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:paddingBottom="6sp"
+        android:background="#fff"
+        android:paddingTop="6sp" >
 
         <LinearLayout
-            android:id="@+id/tv_title"
             android:layout_width="0sp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_weight="1"
-            android:gravity="center"
-            android:layout_gravity="center" >
+            android:gravity="center" >
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/biaoqian" />
+                android:src="@drawable/view" />
 
             <TextView
+                android:id="@+id/tv_view"
                 android:layout_width="wrap_content"
-                android:layout_height="36sp"
+                android:layout_height="28sp"
                 android:gravity="center"
+                android:paddingLeft="8sp"
                 android:text="100"
-                android:textColor="#fff"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:paddingLeft="8sp" />
+                android:textColor="#888"
+                android:textSize="13sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/tv_title"
-            android:layout_width="0sp"
-            android:layout_height="36sp"
-            android:layout_weight="1"
-            android:drawableLeft="@drawable/biaoqian"
-            android:drawablePadding="6sp"
-            android:ellipsize="end"
-            android:gravity="center"
-            android:text="20"
-            android:textColor="#fff"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#888" />
 
-        <TextView
-            android:id="@+id/tv_title"
+        <LinearLayout
             android:layout_width="0sp"
-            android:layout_height="36sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_weight="1"
-            android:drawableLeft="@drawable/biaoqian"
-            android:drawablePadding="6sp"
-            android:ellipsize="end"
-            android:gravity="center"
-            android:text="45"
-            android:textColor="#fff"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/comm" />
+
+            <TextView
+                android:id="@+id/tv_comm"
+                android:layout_width="wrap_content"
+                android:layout_height="28sp"
+                android:gravity="center"
+                android:paddingLeft="8sp"
+                android:text="60"
+                android:textColor="#888"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#888" />
+
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/like" />
+
+            <TextView
+                android:id="@+id/tv_like"
+                android:layout_width="wrap_content"
+                android:layout_height="28sp"
+                android:gravity="center"
+                android:paddingLeft="8sp"
+                android:text="450"
+                android:textColor="#888"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#aaa" />
 
 </LinearLayout>

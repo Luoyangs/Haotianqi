@@ -46,6 +46,12 @@ public class Constant {
 	/**每日一笑appkey*/
 	public static final String HAPPY_APPKEY = "86c994266ab96e8b233d3fde78e775d8";
 	
+	/**热门游记*/
+	public static final String WHERE_BOOK_URL = "http://apis.baidu.com/qunartravel/travellist/travellist";
+	/**热门游记appkey*/
+	public static final String WHERE_BOOK_APPKEY = "86c994266ab96e8b233d3fde78e775d8";
+	
+	
 	/**保存图片文件路径*/
 	@SuppressLint("SdCardPath")
 	public static final String IMAGE_PATH="/mnt/sdcard/downimg";

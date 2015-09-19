@@ -57,6 +57,15 @@ public class ReqUtil {
 		return Constant.HAPPY_PIC_URL + "?page=" + page;
 	}
 	
+	/**
+	 * 说明：获取热门游记URL（每次10条）
+	 * @param page 页码
+	 * @return
+	 */
+	public static String getWhereBookRequestURL(int page){
+		return Constant.WHERE_BOOK_URL + "?page=" + page;
+	}
+	
 	//http://api.map.baidu.com/telematics/v3/weather?location=北京&output=json&ak=iGs8rFvzh1e8c7C9DjXT5toK
 	//http://wthrcdn.etouch.cn/WeatherApi?city=成都
 }
