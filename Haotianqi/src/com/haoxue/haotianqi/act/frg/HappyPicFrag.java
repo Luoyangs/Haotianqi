@@ -139,8 +139,8 @@ public class HappyPicFrag extends Fragment implements OnRefreshListener,OnLoadLi
 	}
 	
 	private class MyAdapter extends BaseAdapter {
-		public List<HappyPicItem> list;
-		public LayoutInflater layoutInflater;
+		private List<HappyPicItem> list;
+		private LayoutInflater layoutInflater;
 
 		public MyAdapter(Context context, List<HappyPicItem> list) {
 			this.list = list;

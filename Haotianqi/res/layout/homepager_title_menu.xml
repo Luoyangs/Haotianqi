@@ -32,7 +32,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/search2"
             android:layout_marginRight="10sp"
-            android:onClick="btnClick" />
+            android:onClick="btnClick"
+            android:visibility="invisible" />
     </LinearLayout>
 
     <RelativeLayout
