@@ -47,7 +47,7 @@ public class LoginAct extends Activity {
 	@OnClick(R.id.titilbar_left)
 	public void onBack(View view){
 		this.finish();
-		overridePendingTransition(R.anim.push_top_in, R.anim.push_top_out);
+		overridePendingTransition(R.anim.transit, R.anim.push_top_out);
 	}
 	
 	private class myGlobalLayoutListener implements OnGlobalLayoutListener{

@@ -45,6 +45,7 @@
         <activity android:name="com.haoxue.haotianqi.act.GuideAct"/>
         <activity android:name="com.haoxue.haotianqi.act.MainAct"/>
         <activity android:name="com.haoxue.haotianqi.act.SeachAct"/>
+        <activity android:name="com.haoxue.haotianqi.act.SetAct"/>
         <activity android:name="com.haoxue.haotianqi.act.SkinAct"/>
         <activity android:name="com.haoxue.haotianqi.act.NoteAct"/>
         <activity android:name="com.haoxue.haotianqi.act.AppStoreAct"/>

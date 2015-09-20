@@ -65,6 +65,7 @@ import android.widget.AbsListView.OnScrollListener;
  *	作者： Luoyangs
  *	时间： 2015年8月26日
  */
+@SuppressLint("DefaultLocale")
 @ContentView(R.layout.act_addcity_layout)
 public class AddCityAct extends Activity implements OnScrollListener {
 
@@ -726,7 +727,7 @@ public class AddCityAct extends Activity implements OnScrollListener {
 	/**离开本页面*/
 	private void finishPage(){
 		this.finish();
-		overridePendingTransition(R.anim.push_top_in, R.anim.push_top_out);
+		overridePendingTransition(R.anim.transit, R.anim.push_top_out);
 	}
 	
 }
