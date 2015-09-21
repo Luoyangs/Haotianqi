@@ -68,9 +68,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginTop="15sp"
                 android:gravity="center_vertical"
-                android:clickable="true"
-                android:paddingLeft="15sp"
-                android:paddingRight="10sp" >
+                android:paddingLeft="15sp" >
 
                 <TextView
                     android:id="@+id/pifu_text"
@@ -80,7 +78,7 @@
                     android:drawableLeft="@drawable/pifu"
                     android:drawablePadding="6sp"
                     android:gravity="center_vertical"
-                    android:text="皮肤 换个漂亮皮肤吧..."
+                    android:text="皮肤 给天皮肤吧..."
                     android:textColor="@color/com_bg_dark_color" />
 
                 <ImageView
@@ -89,14 +87,20 @@
                     android:src="@drawable/right_arrow_icon" />
             </LinearLayout>
 
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/pifu"
+                android:background="#ccc" />
+
             <LinearLayout
                 android:id="@+id/tongzhi"
                 android:layout_width="fill_parent"
                 android:layout_height="50sp"
                 android:layout_gravity="center_vertical"
                 android:gravity="center_vertical"
-                android:paddingLeft="15sp"
-                android:paddingRight="10sp" >
+                android:paddingLeft="15sp" >
 
                 <TextView
                     android:id="@+id/tongzhi_text"
@@ -106,7 +110,7 @@
                     android:drawableLeft="@drawable/message_press"
                     android:drawablePadding="6sp"
                     android:gravity="center_vertical"
-                    android:text="通知 您有新的通知..."
+                    android:text="通知 给天皮肤吧..."
                     android:textColor="@color/com_bg_dark_color" />
 
                 <ImageView
@@ -116,14 +120,19 @@
                     android:src="@drawable/unread_count_bg" />
             </LinearLayout>
 
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#ccc" />
+
             <LinearLayout
                 android:id="@+id/app"
                 android:layout_width="fill_parent"
                 android:layout_height="50sp"
                 android:layout_gravity="center_vertical"
                 android:gravity="center_vertical"
-                android:paddingLeft="15sp"
-                android:paddingRight="10sp" >
+                android:paddingLeft="15sp" >
 
                 <TextView
                     android:id="@+id/app_text"
@@ -133,7 +142,7 @@
                     android:drawableLeft="@drawable/app"
                     android:drawablePadding="6sp"
                     android:gravity="center_vertical"
-                    android:text="应用 每天都有好应用..."
+                    android:text="应用 给天皮肤吧..."
                     android:textColor="@color/com_bg_dark_color" />
 
                 <ImageView
@@ -149,93 +158,158 @@
                 android:layout_height="1px"
                 android:background="#ccc" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="50sp"
-                android:gravity="center_vertical"
-                android:paddingLeft="12sp"
-                android:text="好应用 "
-                android:textColor="#707070"
-                android:textSize="18sp" />
-
             <LinearLayout
-                android:id="@+id/gv_tianqi"
+                android:id="@+id/lay1"
                 android:layout_width="fill_parent"
-                android:layout_height="50sp"
-                android:layout_gravity="center_vertical"
-                android:gravity="center_vertical"
-                android:paddingLeft="15sp" >
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35sp"
+                android:orientation="horizontal" >
 
-                <TextView
-                    android:id="@+id/tongzhi_text"
-                    android:layout_width="0sp"
-                    android:layout_height="fill_parent"
+                <LinearLayout
+                    android:id="@+id/gv_tianqi"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:drawableLeft="@drawable/home_tianqi"
-                    android:drawablePadding="16sp"
-                    android:gravity="center_vertical"
-                    android:text="天气预报"
-                    android:textSize="16sp"
-                    android:textColor="@color/com_bg_dark_color" />
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="center"
+                        android:src="@drawable/home" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6sp"
+                        android:text="天气预报"
+                        android:textColor="@color/com_bg_dark_color"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gv_jiankang"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="center"
+                        android:src="@drawable/home" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6sp"
+                        android:text="健康资讯"
+                        android:textColor="@color/com_bg_dark_color"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gv_jingdian"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="center"
+                        android:src="@drawable/home" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6sp"
+                        android:text="景点查询"
+                        android:textColor="@color/com_bg_dark_color"
+                        android:textSize="12sp" />
+                </LinearLayout>
             </LinearLayout>
-            <LinearLayout
-                android:id="@+id/gv_jiankang"
-                android:layout_width="fill_parent"
-                android:layout_height="50sp"
-                android:layout_gravity="center_vertical"
-                android:gravity="center_vertical"
-                android:paddingLeft="15sp" >
-
-                <TextView
-                    android:layout_width="0sp"
-                    android:layout_height="fill_parent"
-                    android:layout_weight="1"
-                    android:drawableLeft="@drawable/home_jingdian"
-                    android:drawablePadding="16sp"
-                    android:gravity="center_vertical"
-                    android:text="健康资讯"
-                    android:textSize="16sp"
-                    android:textColor="@color/com_bg_dark_color" />
-            </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/gv_jingdian"
+                android:id="@+id/lay2"
                 android:layout_width="fill_parent"
-                android:layout_height="50sp"
-                android:layout_gravity="center_vertical"
-                android:gravity="center_vertical"
-                android:paddingLeft="15sp" >
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="0sp"
-                    android:layout_height="fill_parent"
+                <LinearLayout
+                    android:id="@+id/gv_yingshi"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:drawableLeft="@drawable/home_jiankang"
-                    android:drawablePadding="16sp"
-                    android:gravity="center_vertical"
-                    android:text="景点查询"
-                    android:textSize="16sp"
-                    android:textColor="@color/com_bg_dark_color" />
-            </LinearLayout>
+                    android:gravity="center"
+                    android:orientation="vertical" >
 
-            <LinearLayout
-                android:id="@+id/gv_kuaile"
-                android:layout_width="fill_parent"
-                android:layout_height="50sp"
-                android:layout_gravity="center_vertical"
-                android:gravity="center_vertical"
-                android:paddingLeft="15sp" >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="center"
+                        android:src="@drawable/home" />
 
-                <TextView
-                    android:layout_width="0sp"
-                    android:layout_height="fill_parent"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6sp"
+                        android:text="影视查询"
+                        android:textColor="@color/com_bg_dark_color"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gv_xingzuo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="center"
+                        android:src="@drawable/home" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6sp"
+                        android:text="星座运势"
+                        android:textColor="@color/com_bg_dark_color"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gv_kuaile"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:drawableLeft="@drawable/home_kuaile"
-                    android:drawablePadding="16sp"
-                    android:gravity="center_vertical"
-                    android:text="每日一乐"
-                    android:textSize="16sp"
-                    android:textColor="@color/com_bg_dark_color" />
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="center"
+                        android:src="@drawable/home" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6sp"
+                        android:text="每日一乐"
+                        android:textColor="@color/com_bg_dark_color"
+                        android:textSize="12sp" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

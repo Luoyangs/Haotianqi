@@ -7,9 +7,7 @@ import com.haoxue.haotianqi.act.frg.HappyFrag;
 import com.haoxue.haotianqi.act.frg.HealthFrag;
 import com.haoxue.haotianqi.act.frg.HistoryFrag;
 import com.haoxue.haotianqi.act.frg.MainFrag;
-import com.haoxue.haotianqi.act.frg.MovieFrag;
 import com.haoxue.haotianqi.act.frg.WhereFrag;
-import com.haoxue.haotianqi.act.frg.XingzuoFrag;
 import com.haoxue.haotianqi.base.Constant;
 import com.haoxue.haotianqi.base.ShareDataHelper;
 import com.haoxue.haotianqi.bean.ResponseBean;
@@ -17,7 +15,7 @@ import com.haoxue.haotianqi.receiver.NetReceiver;
 import com.haoxue.haotianqi.util.NetWorkUtil;
 import com.haoxue.haotianqi.util.ReqUtil;
 import com.haoxue.haotianqi.util.ToastUtil;
-import com.haoxue.haotianqi.view.CustomDialog;
+import com.haoxue.haotianqi.view.CuAlertDialog;
 import com.haoxue.haotianqi.view.LoadingDialog;
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ContentView;
@@ -36,6 +34,7 @@ import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.DrawerLayout;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -74,6 +73,7 @@ public class MainAct extends FragmentActivity{
 	private NetReceiver receiver;//网络监听器
 	private IntentFilter filter;
 	private String local = "";//默认城市
+	private long nowtime;
 	
 	private LoadingDialog dialog;
 	
@@ -269,16 +269,6 @@ public class MainAct extends FragmentActivity{
 			layout.setVisibility(View.GONE);
 			maintitle.setText("景点查询");
 			break;
-		case R.id.gv_yingshi://影视
-			this.moveTo(new MovieFrag());
-			layout.setVisibility(View.GONE);
-			maintitle.setText("影视查询");
-			break;
-		case R.id.gv_xingzuo://星座
-			this.moveTo(new XingzuoFrag());
-			layout.setVisibility(View.GONE);
-			maintitle.setText("星座运势");
-			break;
 		case R.id.gv_kuaile://每日一笑
 			this.moveTo(new HappyFrag());
 			layout.setVisibility(View.GONE);
@@ -290,7 +280,7 @@ public class MainAct extends FragmentActivity{
 	/**退出系统*/
 	@OnClick(R.id.exit)
 	public void exit(View view){
-		CustomDialog dialog = new CustomDialog.Builder(MainAct.this).setTitle("提示")
+		CuAlertDialog dialog = new CuAlertDialog.Builder(MainAct.this).setTitle("提示")
 				.setMessage("真的要离开么？")
 				.setPositiveButton("确定", new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int which) {
@@ -319,5 +309,23 @@ public class MainAct extends FragmentActivity{
 	protected void onDestroy() {
 		unregisterReceiver(receiver);
 		super.onDestroy();
+	}
+	
+	/**
+	 * 连续按两次返回则退出程序
+	 */
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			if (System.currentTimeMillis() - nowtime > 2000) {
+				ToastUtil.showShort(this, "再按一次退出");
+				nowtime = System.currentTimeMillis();
+				return true;
+			} else {
+				finish();
+			}
+		}
+		return super.onKeyDown(keyCode, event);
 	}
 }

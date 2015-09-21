@@ -51,6 +51,6 @@ public class HealthDetailAct extends Activity {
 	@OnClick(R.id.titilbar_left)
 	public void onBack(View view){
 		this.finish();
-		overridePendingTransition(R.anim.transit, R.anim.push_top_out);
+		overridePendingTransition(R.anim.slide_in_from_right, R.anim.slide_out_to_left);
 	}
 }

@@ -8,7 +8,7 @@ import com.haoxue.haotianqi.R;
 import com.haoxue.haotianqi.base.ShareDataHelper;
 import com.haoxue.haotianqi.bean.CityWetherBean;
 import com.haoxue.haotianqi.util.ToastUtil;
-import com.haoxue.haotianqi.view.CustomDialog;
+import com.haoxue.haotianqi.view.CuAlertDialog;
 import com.haoxue.haotianqi.view.HXImageView;
 
 import android.content.Context;
@@ -92,7 +92,7 @@ public class CityWeatherManagerAdapter extends BaseAdapter{
 			
 			@Override
 			public void onClick(View v) {
-				new CustomDialog.Builder(context).setTitle("提示信息")
+				new CuAlertDialog.Builder(context).setTitle("提示信息")
 						.setMessage("删除当前城市？")
 						.setNegativeButton("取消", new DialogInterface.OnClickListener() {
 							public void onClick(DialogInterface dialog, int which) {

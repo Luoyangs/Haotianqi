@@ -24,7 +24,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -49,6 +48,7 @@ public class WhereFrag extends Fragment implements OnRefreshListener,OnLoadListe
 	private ImageView seach;
 	private AutoCompleteTextView find;//搜索框
 	private Button btn;
+	private ImageView iv_quit;
 	private CuListView listview;
 	private View view1;//下划线
 	
@@ -87,6 +87,7 @@ public class WhereFrag extends Fragment implements OnRefreshListener,OnLoadListe
 		seach = (ImageView) view.findViewById(R.id.iv_seach);
 		find = (AutoCompleteTextView) view.findViewById(R.id.find);
 		btn = (Button) view.findViewById(R.id.btn);
+		iv_quit = (ImageView) view.findViewById(R.id.iv_quit);
 		listview = (CuListView) view.findViewById(R.id.listview);
 		view1 = (View) view.findViewById(R.id.view);
 		
@@ -114,6 +115,17 @@ public class WhereFrag extends Fragment implements OnRefreshListener,OnLoadListe
 			public void onClick(View view) {
 				String cityName = find.getText().toString();
 				
+			}
+		});
+		
+		iv_quit.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View view) {
+				find.setText("");
+				layout0.setVisibility(View.GONE);
+				layout.setVisibility(View.VISIBLE);
+				view1.setVisibility(View.VISIBLE);
 			}
 		});
 		

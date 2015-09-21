@@ -23,7 +23,7 @@ import com.haoxue.haotianqi.bean.CityBean;
 import com.haoxue.haotianqi.bean.CityWetherBean;
 import com.haoxue.haotianqi.util.PingYinUtil;
 import com.haoxue.haotianqi.util.ToastUtil;
-import com.haoxue.haotianqi.view.CustomDialog;
+import com.haoxue.haotianqi.view.CuAlertDialog;
 import com.haoxue.haotianqi.view.LetterListView;
 import com.haoxue.haotianqi.view.LetterListView.OnTouchingLetterChangedListener;
 import com.lidroid.xutils.ViewUtils;
@@ -504,7 +504,7 @@ public class AddCityAct extends Activity implements OnScrollListener {
 
 					@Override
 					public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
-						new CustomDialog.Builder(AddCityAct.this).setTitle("提示")
+						new CuAlertDialog.Builder(AddCityAct.this).setTitle("提示")
 								.setMessage("真的要删除当前选定么？")
 								.setNegativeButton("取消", new DialogInterface.OnClickListener() {
 									public void onClick(DialogInterface dialog, int which) {
@@ -727,7 +727,7 @@ public class AddCityAct extends Activity implements OnScrollListener {
 	/**离开本页面*/
 	private void finishPage(){
 		this.finish();
-		overridePendingTransition(R.anim.transit, R.anim.push_top_out);
+		overridePendingTransition(R.anim.slide_in_from_right, R.anim.slide_out_to_left);
 	}
 	
 }

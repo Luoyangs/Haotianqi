@@ -6,7 +6,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50sp"
+        android:background="@color/com_bg_blue_color"
         android:orientation="horizontal" >
 
         <Button
@@ -20,18 +21,20 @@
         <TextView
             android:id="@+id/maintitle"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
             android:text="@string/app_name"
-            android:textSize="18sp" />
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/homep_seach"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/search2"
+            android:layout_height="match_parent"
             android:layout_marginRight="10sp"
+            android:background="@drawable/search2"
             android:onClick="btnClick"
             android:visibility="invisible" />
     </LinearLayout>
@@ -44,8 +47,8 @@
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:paddingBottom="5sp"
-        android:paddingTop="5sp"
         android:paddingRight="20sp"
+        android:paddingTop="5sp"
         android:visibility="gone" >
 
         <ImageView
@@ -63,9 +66,9 @@
             android:layout_toRightOf="@+id/tipimg"
             android:gravity="center_vertical"
             android:singleLine="true"
+            android:text="亲，断网了..."
             android:textColor="#666"
-            android:textSize="12sp"
-            android:text="亲，断网了..." />
+            android:textSize="12sp" />
 
         <ImageView
             android:layout_width="wrap_content"

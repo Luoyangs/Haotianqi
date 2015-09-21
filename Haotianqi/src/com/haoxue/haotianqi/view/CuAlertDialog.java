@@ -16,13 +16,13 @@ import android.widget.TextView;
  *	作者： Luoyangs
  *	时间： 2015年8月18日
  */
-public class CustomDialog extends Dialog {  
+public class CuAlertDialog extends Dialog {  
 	  
-    public CustomDialog(Context context) {  
+    public CuAlertDialog(Context context) {  
         super(context);  
     }  
   
-    public CustomDialog(Context context, int theme) {  
+    public CuAlertDialog(Context context, int theme) {  
         super(context, theme);  
     }  
   
@@ -120,11 +120,11 @@ public class CustomDialog extends Dialog {
             return this;  
         }  
   
-        public CustomDialog create() {  
+        public CuAlertDialog create() {  
             LayoutInflater inflater = (LayoutInflater) context  
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);  
             // instantiate the dialog with the custom Theme  
-            final CustomDialog dialog = new CustomDialog(context,R.style.Dialog);  
+            final CuAlertDialog dialog = new CuAlertDialog(context,R.style.Dialog);  
             View layout = inflater.inflate(R.layout.cu_dialog_layout, null);  
             dialog.addContentView(layout, new LayoutParams(  
                     LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));  

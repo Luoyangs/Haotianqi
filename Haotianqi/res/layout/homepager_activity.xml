@@ -2,13 +2,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_homepager_blur"
-    android:paddingTop="10dp" >
+    android:background="@drawable/bg_homepager_blur">
 
     <include
         android:id="@+id/homep_title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50sp"
         layout="@layout/homepager_title_menu" />
 
     <FrameLayout
@@ -16,8 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/home_bottom_menu_bar"
-        android:layout_below="@+id/homep_title"
-        android:paddingTop="10sp" >
+        android:layout_below="@+id/homep_title" >
     </FrameLayout>
 
     <LinearLayout

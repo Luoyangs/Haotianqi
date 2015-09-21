@@ -31,7 +31,8 @@
     <color name="title_blue">#0079FF</color>
     
     <!-- 通用颜色 -->
-    <color name="com_bg_blue_color">#0096FF</color>
+    <color name="com_bg_blue_color">#23A4FF</color>
     <color name="com_bg_gray_color">#E1E0DE</color>
+    <color name="com_bg_dark_color">#202020</color>
 
 </resources>
