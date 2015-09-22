@@ -54,7 +54,6 @@
         <activity android:name="com.haoxue.haotianqi.act.HealthDetailAct"/>
         <activity android:name="com.haoxue.haotianqi.act.ShowImageAct"/>
         <activity android:name="com.haoxue.haotianqi.act.FankuiAct"/>
-        <activity android:name="com.haoxue.haotianqi.act.FenxiangAct"/>
         <activity android:name="com.haoxue.haotianqi.act.QiandaoAct"/>
         
         <!-- 声明service组件,每个app拥有自己单独的定位service -->

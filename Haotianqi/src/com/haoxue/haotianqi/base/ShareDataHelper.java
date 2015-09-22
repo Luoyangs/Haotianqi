@@ -1,8 +1,11 @@
 package com.haoxue.haotianqi.base;
 
+import com.haoxue.haotianqi.R;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.widget.EditText;
 
 /** 
  *	说明：程序运行保存本地的数据
@@ -55,6 +58,18 @@ public class ShareDataHelper {
 		Editor editor = appshare.edit();
     	editor.putBoolean("isFirstIn", isFirstIn);
 		editor.commit();
+	}
+	
+	/**保存背景图片*/
+	public void saveBgImage(int imgId){
+		Editor editor = appshare.edit();
+		editor.putInt("imgId", imgId);
+		editor.commit();
+	}
+	
+	/**保存登录信息（是否第一次初始化程序）*/
+	public int getBgImage(){
+		return appshare.getInt("imgId", R.drawable.bg_snow_2);
 	}
 	
 	/**保存上一次定位的城市（是否第一次初始化程序）*/

@@ -24,6 +24,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -254,6 +255,7 @@ public class WhereFrag extends Fragment implements OnRefreshListener,OnLoadListe
 
 	@Override
 	public void onLoad() {
+		Log.e("Main", "Load");
 		swipeLayout.postDelayed(new Runnable() {
 
 			@Override

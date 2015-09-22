@@ -187,11 +187,11 @@ public class MainAct extends FragmentActivity{
 		startActivity(new Intent(Settings.ACTION_SETTINGS));
 	}
 	
-	@OnClick({R.id.homep_seach,R.id.changInfo,R.id.set,R.id.pifu,R.id.tongzhi,R.id.app})
+	@OnClick({R.id.homep_qiandao,R.id.changInfo,R.id.set,R.id.pifu,R.id.tongzhi,R.id.app})
 	public void doSkip(View view){
 		switch (view.getId()) {
-		case R.id.homep_seach:// 打开右侧的搜索
-			startActivity(new Intent(MainAct.this, SeachAct.class));
+		case R.id.homep_qiandao:// 打开右侧的签到
+			startActivity(new Intent(MainAct.this, QiandaoAct.class));
 			break;
 		case R.id.changInfo://修改个人信息
 			if (changInfo.equals("修改信息")) {

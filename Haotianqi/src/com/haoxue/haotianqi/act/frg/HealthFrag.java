@@ -73,15 +73,13 @@ public class HealthFrag extends Fragment implements OnRefreshListener, OnLoadLis
 	};
 
 	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.fragment_health_layout, null,
-				false);
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		View view = inflater.inflate(R.layout.fragment_health_layout, null,false);
 		swipeLayout = (RefreshLayout) view.findViewById(R.id.swipe_container);
 		listView = (ListView) view.findViewById(R.id.list);
 		list = new ArrayList<HealthBean>();
 		response = new HeaResponse();
-
+		
 		swipeLayout.setColorScheme(R.color.color_bule2, R.color.color_bule1,
 				R.color.color_bule2, R.color.color_bule3);
 		swipeLayout.setOnRefreshListener(this);

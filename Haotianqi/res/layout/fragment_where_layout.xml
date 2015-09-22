@@ -1,97 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.haoxue.haotianqi.view.RefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_white"
-    android:orientation="vertical" >
+    android:background="@color/bg_white" >
 
-    <LinearLayout
-        android:id="@+id/title_bar0"
+    <ScrollView
+        android:id="@+id/mys"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
 
-        <AutoCompleteTextView
-            android:id="@+id/find"
-            android:layout_width="0sp"
-            android:layout_height="50sp"
-            android:layout_weight="1"
-            android:background="@drawable/edittext_bg"
-            android:drawableLeft="@drawable/search"
-            android:drawablePadding="6sp"
-            android:padding="5sp"
-            android:textSize="14sp"
-            android:visibility="visible" />
-
-        <Button
-            android:id="@+id/btn"
-            android:layout_width="wrap_content"
-            android:layout_height="40sp"
-            android:background="@android:color/transparent"
-            android:gravity="center_vertical"
-            android:paddingLeft="15sp"
-            android:paddingRight="15sp"
-            android:text="搜索"
-            android:textColor="@color/com_bg_dark_color"
-            android:textSize="16sp" />
-
-        <ImageView
-            android:id="@+id/iv_quit"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
-            android:paddingRight="15sp"
-            android:src="@drawable/ic_menu_close_clear_cancel" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/title_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-        <TextView
-            android:layout_width="0sp"
-            android:layout_height="50sp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:gravity="center_vertical"
-            android:paddingLeft="6sp"
-            android:text="热门游记"
-            android:textColor="@color/com_bg_dark_color"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/iv_seach"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
-            android:paddingLeft="15sp"
-            android:paddingRight="15sp"
-            android:src="@drawable/search2" />
-    </LinearLayout>
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:background="#fff" />
-
-    <com.haoxue.haotianqi.view.RefreshLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/swipe_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <com.haoxue.haotianqi.view.CuListView
-            android:id="@+id/listview"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0sp"
-            android:layout_weight="1"
-            android:divider="#eee"
-            android:dividerHeight="14sp"
-            android:scrollbars="none" />
-    </com.haoxue.haotianqi.view.RefreshLayout>
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-</LinearLayout>
+            <LinearLayout
+                android:id="@+id/title_bar0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <AutoCompleteTextView
+                    android:id="@+id/find"
+                    android:layout_width="0sp"
+                    android:layout_height="50sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_bg"
+                    android:drawableLeft="@drawable/search"
+                    android:drawablePadding="6sp"
+                    android:padding="5sp"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15sp"
+                    android:paddingRight="15sp"
+                    android:text="搜索"
+                    android:textColor="@color/com_bg_dark_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv_quit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:paddingRight="15sp"
+                    android:src="@drawable/ic_menu_close_clear_cancel" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/title_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_height="50sp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="6sp"
+                    android:text="热门游记"
+                    android:textColor="@color/com_bg_dark_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/iv_seach"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="15sp"
+                    android:paddingRight="15sp"
+                    android:src="@drawable/search2" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#fff" />
+
+            <com.haoxue.haotianqi.view.CuListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:layout_weight="1"
+                android:divider="#eee"
+                android:dividerHeight="14sp"
+                android:scrollbars="none" />
+        </LinearLayout>
+    </ScrollView>
+
+</com.haoxue.haotianqi.view.RefreshLayout>

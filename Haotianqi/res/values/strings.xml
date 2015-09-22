@@ -36,6 +36,14 @@
     <string name="launch_guan">观</string>
     <string name="add_city_text">热门城市</string>
 
-    
+    <!-- 背景图片集合 -->
+    <string-array name="bg_image_attr">
+        <item>@drawable/bg_homepager_blur</item>
+        <item>@drawable/bg_rain_blur</item>
+        <item>@drawable/bg_sand_storm_blur</item>
+        <item>@drawable/bg_snow_blur</item>
+        <item>@drawable/bg_yin_blur</item>
+        <item>@drawable/bg_snow_2</item>
+    </string-array>
     
 </resources>

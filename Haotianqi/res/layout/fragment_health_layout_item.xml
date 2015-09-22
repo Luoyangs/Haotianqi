@@ -25,7 +25,7 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:text="精神科的经济可能是假的"
-            android:textColor="#fff"
+            android:textColor="@color/com_bg_dark_color"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -36,7 +36,7 @@
             android:layout_marginTop="5sp"
             android:paddingRight="8dp"
             android:text="\t精神科的经济可尊姓大名，女，在室内的建筑师多种，写的能是假的"
-            android:textColor="#ccc"
+            android:textColor="#555"
             android:textSize="14sp"
             android:textStyle="bold" />
 
@@ -49,7 +49,7 @@
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:text="2015-09-16 11:25"
-            android:textColor="#666"
+            android:textColor="#888"
             android:textSize="13sp"
             android:textStyle="bold" />
     </LinearLayout>

@@ -30,13 +30,12 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/homep_seach"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:id="@+id/homep_qiandao"
+            android:layout_width="32sp"
+            android:layout_height="32sp"
             android:layout_marginRight="10sp"
-            android:background="@drawable/search2"
-            android:onClick="btnClick"
-            android:visibility="invisible" />
+            android:padding="10sp"
+            android:background="@drawable/vip"/>
     </LinearLayout>
 
     <RelativeLayout

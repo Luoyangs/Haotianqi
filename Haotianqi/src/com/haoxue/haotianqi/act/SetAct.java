@@ -71,8 +71,7 @@ public class SetAct extends Activity implements OnCheckedChangeListener{
 			this.finishPage();
 			break;
 		case R.id.ly_fenxiang:
-			startActivity(new Intent(this,FenxiangAct.class));
-			this.finishPage();
+			ToastUtil.showShort(this, "暂未开启此功能 ");
 			break;
 		}
 	}

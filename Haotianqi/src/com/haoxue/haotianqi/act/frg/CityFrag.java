@@ -19,6 +19,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.RelativeLayout;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 
@@ -29,6 +30,7 @@ import android.widget.GridView;
  */
 public class CityFrag extends Fragment {
 
+	private RelativeLayout ci;
 	private GridView cityViews;
 	
 	private List<CityWetherBean> list = new ArrayList<CityWetherBean>();
@@ -56,6 +58,11 @@ public class CityFrag extends Fragment {
 			}
 		});
 
+		//设置背景
+		ci = (RelativeLayout) view.findViewById(R.id.ci);
+		int imgId = ShareDataHelper.getInstance(getActivity()).getBgImage();
+		ci.setBackgroundResource(imgId);
+		
 		adapter = new CityWeatherManagerAdapter(getActivity(), list);
 		cityViews.setAdapter(adapter);
 		return view;

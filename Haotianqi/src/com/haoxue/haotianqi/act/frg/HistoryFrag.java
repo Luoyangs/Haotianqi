@@ -9,6 +9,7 @@ import java.util.List;
 import com.alibaba.fastjson.JSON;
 import com.haoxue.haotianqi.R;
 import com.haoxue.haotianqi.base.Constant;
+import com.haoxue.haotianqi.base.ShareDataHelper;
 import com.haoxue.haotianqi.bean.HisResponse;
 import com.haoxue.haotianqi.bean.HistoryDay;
 import com.haoxue.haotianqi.util.DensityUtil;
@@ -33,6 +34,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 /** 
@@ -43,6 +45,7 @@ import android.widget.TextView;
 @SuppressLint("InflateParams")
 public class HistoryFrag extends Fragment implements OnRefreshListener,OnLoadListener {
 
+	private RelativeLayout his;
 	private RefreshLayout swipeLayout;
 	private ListView listView;
 	private static List<HistoryDay> list;
@@ -78,6 +81,7 @@ public class HistoryFrag extends Fragment implements OnRefreshListener,OnLoadLis
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_history_layout, null, false);
+		his = (RelativeLayout) view.findViewById(R.id.his);
 		swipeLayout = (RefreshLayout) view.findViewById(R.id.swipe_container);
 		listView = (ListView) view.findViewById(R.id.list);
 		list = new ArrayList<HistoryDay>();
@@ -86,6 +90,10 @@ public class HistoryFrag extends Fragment implements OnRefreshListener,OnLoadLis
 		Calendar calendar = Calendar.getInstance();
 		month = calendar.get(Calendar.MONTH) + 1; 
 		day = calendar.get(calendar.DAY_OF_MONTH);
+		
+		//设置背景
+		int imgId = ShareDataHelper.getInstance(getActivity()).getBgImage();
+		his.setBackgroundResource(imgId);
 		
 		swipeLayout.setColorScheme(R.color.color_bule2, R.color.color_bule1,
 				R.color.color_bule2, R.color.color_bule3);
