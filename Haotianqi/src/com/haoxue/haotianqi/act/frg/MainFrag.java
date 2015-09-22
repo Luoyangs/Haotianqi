@@ -18,6 +18,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 
 /** 
  *	说明：天气预报主框架
@@ -27,6 +28,7 @@ import android.view.ViewGroup;
 @SuppressLint({ "ValidFragment", "InflateParams" })
 public class MainFrag extends Fragment{
 
+	public static RelativeLayout mylayout;
 	private ViewPager viewPager;
     private LinePageIndicator indicator;
     
@@ -44,6 +46,7 @@ public class MainFrag extends Fragment{
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		
 		View view = inflater.inflate(R.layout.fragment_main_layout, null);
+		mylayout = (RelativeLayout) view.findViewById(R.id.mylayout);
 		viewPager = (ViewPager) view.findViewById(R.id.viewPager);
 		indicator = (LinePageIndicator) view.findViewById(R.id.indicator);
 

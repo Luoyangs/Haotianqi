@@ -2,7 +2,6 @@ package com.haoxue.haotianqi.act.frg;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 import com.alibaba.fastjson.JSON;
@@ -15,6 +14,7 @@ import com.haoxue.haotianqi.bean.CityWetherBean;
 import com.haoxue.haotianqi.bean.ResponseBean;
 import com.haoxue.haotianqi.bean.SportIndexBean;
 import com.haoxue.haotianqi.bean.WeatherBean;
+import com.haoxue.haotianqi.bean.WeatherSubBean;
 import com.haoxue.haotianqi.util.LunarUtil;
 import com.haoxue.haotianqi.util.NetWorkUtil;
 import com.haoxue.haotianqi.util.ReqUtil;
@@ -173,8 +173,28 @@ public class WeatherFrag extends Fragment {
 				temp.setText(temperature);
 			}
 
+			List<WeatherSubBean> tempbean= bean.getWeather_data();
+			if (tempbean != null && tempbean.size() > 0) {
+				String todayString = tempbean.get(0).getWeather().trim(); 
+				//设置背景图片
+				int imgId = R.drawable.bg_fine_day;
+				if (todayString.equals("晴")) {
+					imgId = R.drawable.bg_homepager;
+				}else if (todayString.equals("晴转多云")) {
+					imgId = R.drawable.bg_fine_day;
+				}else if (todayString.equals("多云转晴")) {
+					imgId = R.drawable.bg_cloudy_day;
+				}else if (todayString.contains("雨")) {
+					imgId = R.drawable.bg_rain;
+				}else if (todayString.contains("雷")) {
+					imgId = R.drawable.bg_thunder_storm;
+				}else if (todayString.contains("雪")) {
+					imgId = R.drawable.bg_snow_2;
+				}
+				MainFrag.mylayout.setBackgroundResource(imgId);
+			}
 			//加载预报天气列表
-			weatherList.setAdapter(new WetherListAdapter(getActivity(), bean.getWeather_data()));
+			weatherList.setAdapter(new WetherListAdapter(getActivity(), tempbean));
 			lifeIndexs = bean.getIndex();
 			if (lifeIndexs == null || lifeIndexs.size() == 0) {
 				for (int i = 0; i < 8; i++) {
