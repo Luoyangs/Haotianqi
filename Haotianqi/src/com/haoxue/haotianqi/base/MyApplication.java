@@ -35,8 +35,6 @@ public class MyApplication extends Application {
 				.denyCacheImageMultipleSizesInMemory()
 				.discCacheFileNameGenerator(new Md5FileNameGenerator())
 				.tasksProcessingOrder(QueueProcessingType.LIFO)
-				.discCacheSize(32*1024*1024)
-				.memoryCacheSize(4*1024*1024)
 				.enableLogging().build();
 		ImageLoader.getInstance().init(config);
 	}
